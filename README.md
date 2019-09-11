@@ -1,4 +1,4 @@
-# Site Checker
+# Website Status Checker
 First project in Golang. 
 
 Makes use of goRoutines and channels to concurrently ping a list of websites at  5 second intervals. 
