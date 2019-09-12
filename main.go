@@ -14,7 +14,7 @@ func main() {
 		"https://linkedin.com/",
 		"https://instagram.com/",
 		"https://facebook.com/",
-		"https://twitter.com/",
+		"https://plug.af/",
 	}
 
 	// Create a channel c
@@ -40,11 +40,11 @@ func main() {
 func checkSite(link string, c chan string) {
 	_, err := http.Get(link)
 	if err != nil {
-		fmt.Println(link, "is NOT working")
+		fmt.Println("❌", link, "is NOT working")
 		c <- link
 		return
 	}
-	fmt.Println(link, "works")
+	fmt.Println("✅ ", link, "works")
 	c <- link
 	return
 }
